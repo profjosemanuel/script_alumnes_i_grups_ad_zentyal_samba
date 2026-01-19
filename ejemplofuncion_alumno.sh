@@ -6,7 +6,7 @@ set -o pipefail
 
 
 alumnos() {
-  echo "$1 alumno"
+  echo "alumno$1_27"
 }
 
 alumnos "1eso"
