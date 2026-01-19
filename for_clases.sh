@@ -1,9 +1,14 @@
 #!/bin/bash
+set -e
+set -u
+set -o pipefail
 
-# Define the array
-grades=("1eso" "2eso" "3eso" "4eso")
 
-# Loop through the array
-for grade in "${grades[@]}"; do
-    echo "Current grade: $grade"
+
+# Definir el array
+niveles=("1eso" "2eso" "3eso" "4eso")
+
+# for en la lista de cadenas de caracteres
+for nivel in "${niveles[@]}"; do
+    echo "Nivel: $nivel"
 done
