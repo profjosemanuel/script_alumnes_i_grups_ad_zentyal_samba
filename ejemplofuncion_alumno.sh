@@ -5,6 +5,8 @@ set -u
 set -o pipefail
 
 
-alumnos(clase) {
-  echo "$clase"
+alumnos() {
+  echo "$1 alumno"
 }
+
+alumnos "1eso"
