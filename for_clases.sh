@@ -6,7 +6,7 @@ set -o pipefail
 
 niveles() {
 # Definir el array
-niveles=("1eso" "2eso" "3eso" "4eso")
+niveles=("1esoA" "1esoB" "1esoC" "1esoD")
 
 # for en la lista de cadenas de caracteres
 for nivel in "${niveles[@]}"; do
