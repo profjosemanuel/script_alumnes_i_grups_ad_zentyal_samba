@@ -4,7 +4,7 @@ set -u
 set -o pipefail
 
 
-niveles() {
+niveles_1eso() {
 # Definir el array
 niveles=("1esoA" "1esoB" "1esoC" "1esoD")
 
