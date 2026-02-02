@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+
+set -e
+set -u
+set -o pipefail
+
+
+
+alumnos_test() {
+for num in {1..30}; do
+echo "samba-tool user add " "alumno$1_$num" "alumno$1_$num"
+echo "samba-tool group addmembers" "$nivel" "alumno$1_$num"
+done
+}
+
+niveles1eso() {
+# Definir el array
+niveles=("1esoA" "1esoB" "1esoC" "1esoD")
+
+# for en la lista de cadenas de caracteres
+for nivel in "${niveles[@]}"; do
+echo  "samba-tool group add" "$nivel"
+    alumnos_test "$nivel"
+done
+}
+
+niveles2eso() {
+# Definir el array
+niveles=("2esoA" "2esoB" "2esoC" "2esoD")
+
+# for en la lista de cadenas de caracteres
+for nivel in "${niveles[@]}"; do
+#    echo "Nivel: $nivel"
+samba-tool group add "$nivel"
+    alumnos "$nivel"
+done
+}
+
+niveles3eso() {
+# Definir el array
+niveles=("3esoA" "3esoB" "3esoC" "3esoD")
+
+# for en la lista de cadenas de caracteres
+for nivel in "${niveles[@]}"; do
+#    echo "Nivel: $nivel"
+samba-tool group add "$nivel"
+    alumnos "$nivel"
+done
+}
+
+niveles4eso() {
+# Definir el array
+niveles=("4esoA" "4esoB" "4esoC" "4esoD")
+
+# for en la lista de cadenas de caracteres
+for nivel in "${niveles[@]}"; do
+#    echo "Nivel: $nivel"
+samba-tool group add "$nivel"
+    alumnos "$nivel"
+done
+}
+niveles1eso
+#niveles2eso
+#niveles3eso
+#niveles4eso
+#1eso
+#2eso
+#3eso
+#4eso
+#alumnos "1eso"
