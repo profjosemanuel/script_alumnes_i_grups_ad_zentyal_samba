@@ -9,7 +9,7 @@ set -o pipefail
 alumnos_test() {
 for num in {1..30}; do
 echo "samba-tool user add " "alumno$1_$num" "alumno$1_$num"
-echo "samba-tool group addmembers" "$nivel" "alumno$1_$num"
+echo "samba-tool group addmembers" "$1" "alumno$1_$num"
 done
 }
 
