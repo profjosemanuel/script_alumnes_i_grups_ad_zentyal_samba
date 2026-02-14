@@ -13,6 +13,15 @@ echo "samba-tool group addmembers" "$1" "alumno$1_$num"
 done
 }
 
+alumnos() {
+for num in {1..30}; do
+    samba-tool user add  "alumno$1_$num" "alumno$1_$num"
+    samba-tool group addmembers "$1" "alumno$1_$num"
+done
+}
+
+
+
 niveles1eso() {
 # Definir el array
 niveles=("1esoA" "1esoB" "1esoC" "1esoD")
@@ -20,7 +29,7 @@ niveles=("1esoA" "1esoB" "1esoC" "1esoD")
 # for en la lista de cadenas de caracteres
 for nivel in "${niveles[@]}"; do
 echo  "samba-tool group add" "$nivel"
-    alumnos_test "$nivel"
+    alumnos "$nivel"
 done
 }
 
